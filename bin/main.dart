@@ -10,7 +10,7 @@ void main(List<String> arguments) {
   print("***** Variables *****");
   var num1 = 100;
   var num2 = 109;
-  print("num1 and num2 are variables");
+  print("num1: $num1 and num2: $num2 are variables");
   print("\n\n\n");
 
   /** Data variables */
@@ -21,6 +21,7 @@ void main(List<String> arguments) {
   const Name = "Moez Missaoui";
   final Age;
   Age = 31;
+  print(Name);
   print(Age);
   print("\n\n\n");
   int val1 = 20;
@@ -38,6 +39,7 @@ void main(List<String> arguments) {
   /** Loops */
   loopsFun();
 
+  /** Arrow functions */
   var resMname = mName("Marwa");
   print(resMname);
 }
@@ -109,4 +111,4 @@ void loopsFun() {
 }
 
 String mName(String name) =>
-    (name.startsWith('M')) ? "${name} is M name" : "${name} isn't M name";
+    (name.startsWith('M')) ? "$name is M name" : "$name isn't M name";
