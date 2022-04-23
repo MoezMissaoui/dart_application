@@ -3,8 +3,13 @@ import 'package:dart_application/conditions.dart' as conditions;
 import 'package:dart_application/loops.dart' as loops;
 import 'package:dart_application/helpers/aritmitics.dart' as aritmitics;
 
+String welcome =
+    "Welcome to my Dart console application."; // Global variable => used everywhere in file
 void main(List<String> arguments) {
   introduction();
+
+  var welcome = "You are in the main function.";
+  print(welcome);
 
   /** Variables  */
   print("***** Variables *****");
@@ -48,6 +53,7 @@ void main(List<String> arguments) {
 }
 
 void introduction() {
+  print(welcome);
   print("***** My Presentation *****");
   var myname = "Moez Missaoui";
   var myage = 30;
