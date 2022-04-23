@@ -18,11 +18,11 @@ void main(List<String> arguments) {
 
   /** Const && Final */
   print("***** Const && Final *****");
-  const Name = "Moez Missaoui";
-  final Age;
-  Age = 31;
-  print(Name);
-  print(Age);
+  const name = "Moez Missaoui";
+  final age = 22;
+
+  print(name);
+  print(age);
   print("\n\n\n");
   int val1 = 20;
   int val2 = 129;
@@ -42,6 +42,9 @@ void main(List<String> arguments) {
   /** Arrow functions */
   var resMname = mName("Marwa");
   print(resMname);
+
+  /** Optional && required parameters functions */
+  concatStrings("Hello freinds, ");
 }
 
 void introduction() {
@@ -73,7 +76,7 @@ void dataVariablesFunc() {
   print("\n\n\n");
 }
 
-void operatorsFunc(val1, val2) {
+void operatorsFunc(num val1, num val2) {
   print("***** Operators *****");
   num sum = aritmitics.sumCalc(val1, val2);
   num mins = aritmitics.sumCalc(val1, -val2);
@@ -88,7 +91,7 @@ void operatorsFunc(val1, val2) {
   print("\n\n\n");
 }
 
-void arithmeticFunc(val1, val2) {
+void arithmeticFunc(num val1, num val2) {
   print("***** Arithmetic *****");
   bool result = ((val1 != val2) && (val1 < val2)) || (val1 > val2);
   print(result);
@@ -112,3 +115,11 @@ void loopsFun() {
 
 String mName(String name) =>
     (name.startsWith('M')) ? "$name is M name" : "$name isn't M name";
+
+void concatStrings(String str1, [String str2 = "", String? str3]) {
+  String retSTr = str1;
+  retSTr += (str2 != "") ? str2 : " [str2 VIDE] ";
+  retSTr += (str3 != null) ? str3 : " [str3 NULL] ";
+  retSTr += " .";
+  print(retSTr);
+}
